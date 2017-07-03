@@ -7,91 +7,91 @@
     tools:context="com.doudoujay.purduecard.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/purdueImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/gateway_arch" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignBottom="@id/imageView"
+        android:layout_alignBottom="@id/purdueImage"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:layout_below="@+id/purdueImage">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="56dp"
-            android:layout_marginTop="8dp"
-            android:text="Purdue University"
-            android:textSize="34sp" />
-
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                app:srcCompat="@drawable/ic_phone" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/purdue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="56dp"
-                android:text="765-494-4600"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_alignTop="@+id/imageView4"
-                android:layout_alignParentLeft="true" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
                 android:layout_marginTop="8dp"
+                android:text="Purdue University"
+                android:textSize="34sp" />
 
-                android:layout_below="@id/imageView4"
-                app:srcCompat="@drawable/ic_location_on" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgPhone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/phoneNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/imgPhone"
+                    android:layout_marginLeft="56dp"
+                    android:text="765-494-4600"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/imgPhone"
+
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_location_on" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgLocation"
+                    android:layout_marginLeft="56dp"
+                    android:text="610 Purdue Mall, West Lafayette, \nIN 47907"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:id="@+id/descrition"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/imageView6"
                 android:layout_marginLeft="56dp"
-                android:text="610 Purdue Mall, West Lafayette, \nIN 47907"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="56dp"
-            android:text="Purdue University is a public research university located in West Lafayette, Indiana and is the main campus of the Purdue University system.[5] The university was founded in 1869 after Lafayette businessman John Purdue donated land and money to establish a college of science, technology, and agriculture in his name.[6] The first classes were held on September 16, 1874, with six instructors and 39 students.[6]"
-             />
-
-
-    </LinearLayout>
-
-
+                android:layout_weight="1"
+                android:text="Purdue University is a public research university located in West Lafayette, Indiana and is the main campus of the Purdue University system.[5] The university was founded in 1869 after Lafayette businessman John Purdue donated land and money to establish a college of science, technology, and agriculture in his name.[6] The first classes were held on September 16, 1874, with six instructors and 39 students.[6]" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
